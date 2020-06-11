@@ -110,11 +110,8 @@ class CrudEmpresa{
                <?php
           } catch (Exception $e) {
                //echo $e->getMessage();//Mostrar errores en la insercion
-
-
                ?>
                <script>
-          //header("location:../../index.php");
                alert("No se puede elimitar la empresa, esta  esta  siendo utilizada en una  o mas cotizaciones");
                document.location.href="../Vista/ListarEmpresa.php";
                </script>
