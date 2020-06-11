@@ -58,7 +58,6 @@ class CrudEmpresa{
                $MyEmpresa->setEmpresa($Empresa['Empresa']);
                $MyEmpresa->setCiudad($Empresa['Ciudad']);
                $MyEmpresa->setDireccion($Empresa['Direccion']);
-               
 
           } catch (Exception $e) {
                echo $e->getMessage();//Mostrar errores en la modificacion
@@ -67,7 +66,6 @@ class CrudEmpresa{
           return $MyEmpresa;
 
      }
-
 
      public function ModificarEmpresa($Empresa){
           $Db = Db::Conectar();
@@ -79,10 +77,8 @@ class CrudEmpresa{
 
           try {
                $Sql->execute();//ejecutar el insert
-               //Echo " Modificacion exitosa";
                ?>
                <script>
-          //header("location:../../index.php");
                alert("Modificacion Exitosa");
                document.location.href="../Vista/ListarEmpresa.php";
                </script>
@@ -100,10 +96,8 @@ class CrudEmpresa{
 
           try {
                $Sql->execute();//ejecutar el insert
-               //Echo "Eliminacion exitosa";
                ?>
                <script>
-          //header("location:../../index.php");
                alert("Eliminacion exitosa");
                document.location.href="../Vista/ListarEmpresa.php";
                </script>

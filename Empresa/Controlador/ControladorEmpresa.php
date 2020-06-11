@@ -13,7 +13,6 @@ if (isset($_POST["Crear"])) {
      $Empresa->setEmpresa($_POST["Empresa"]);
      $Empresa->setCiudad($_POST["Ciudad"]);
      $Empresa->setDireccion($_POST["Direccion"]);
-   
 
      $CrudEmpresa::InsertarEmpresa($Empresa);
 }
@@ -28,7 +27,7 @@ elseif(isset($_POST["Editar"])) {
 
 }
 elseif ($_GET['Accion']== "EliminarEmpresa") {
-     
+
      $CrudEmpresa::EliminarEmpresa($_GET["IdEmpresa"]);
 }
 
