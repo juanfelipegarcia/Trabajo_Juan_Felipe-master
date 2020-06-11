@@ -29,13 +29,16 @@ $ListaEmpresa = $CrudEmpresa->ListarEmpresa();
 </head>
 <body>
      <div class="container">
-          <ul class="nav justify-content-end">
-               <li class="nav-item">
-               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../CerrarSeccion.php">Cerrar Seccion</a></button>
-               </li>
-          </ul>
-     <h1 align="center">EMPRESAS</h1>
-     <br>
+          <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+               <h5 class="my-0 mr-md-auto font-weight-normal">Kreemo Solution System</h5>
+               <nav class="my-2 my-md-0 mr-md-3">
+                    <a class="p-2 text-dark" href="../../Cotizacion/Vista/ListarCotizacion.php">Cotizaciones</a>
+               </nav>
+               <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Seccion</a>
+          </div>
+
+          <h1 align="center">EMPRESAS</h1>
+          <br>
           <ul class="nav nav-fill">
                <li class="nav-item">
                <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="CrearEmpresa.php">Crear Nueva Empresa</a></button>

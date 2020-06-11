@@ -25,18 +25,21 @@ $mysqli = new mysqli('localhost', 'root', '', 'pruebaphp');
      
 </head>
 <body>
-     <div class="container col-md-6">
-          <ul class="nav justify-content-end">
-               <li class="nav-item">
-               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../CerrarSeccion.php">Cerrar Seccion</a></button>
-               </li>
-          </ul>
+     <div class="container">
+          <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+               <h5 class="my-0 mr-md-auto font-weight-normal">Kreemo Solution System</h5>
+               <nav class="my-2 my-md-0 mr-md-3">
+                    <a class="p-2 text-dark" href="listarCotizacion.php">Cotizaciones</a>
+                    <a class="p-2 text-dark" href="../../Empresa/Vista/ListarEmpresa.php">Empresas</a>
+               </nav>
+               <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Seccion</a>
+          </div>
           <h1 align="center">Crear Cotización</h1>
           <br>
-          <form action="../Controlador/ControladorCotizacion.php" method="post" id="FrmCrearCotizacion" name="FrmCrearCotizacion">
+          <form class="form-signin" action="../Controlador/ControladorCotizacion.php" method="post" id="FrmCrearCotizacion" name="FrmCrearCotizacion">
 
                <div class="form-row" >
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-8">
                          <label for="">Empresa</label>
                          <label class="validacion" id="validacion_empresa"></label>
                          <select id="IdEmpresa"  name= "IdEmpresa" class="form-control">
@@ -49,15 +52,16 @@ $mysqli = new mysqli('localhost', 'root', '', 'pruebaphp');
                               ?>
                          </select>
                          <label class="validacion" id="validacion_empresa2"></label>
-                         
                     </div>
-                    <div class="form-group col-md-4">
+               </div>
+               <div class="form-row" >
+                    <div class="form-group col-md-6">
                          <label for="inputState">Estado</label>
                          <label class="validacion" id="validacion_Estado"></label>
                          <input type="text" class="form-control" id="Estado" name="Estado">
                          <label class="validacion" id="validacion_Estado2"></label>
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-6">
                          <label for="inputPassword4">Metros m<sup>3</sup></label>
                          <label class="validacion" id="validacion_MetrosCubicos"></label>
                          <input type="text" class="form-control solo_numeros" id="Metros_Cubicos" name="Metros_Cubicos">
@@ -94,7 +98,7 @@ $mysqli = new mysqli('localhost', 'root', '', 'pruebaphp');
                <button type="submit" class="btn btn-primary">Crear Cotizacion</button>
                </form>
                <br>
-               <div class="form-row" align="center">
+               <div align="center">
                <button  type="" class="btn btn-primary"><a href="ListarCotizacion.php"><font color="#ffffff">Volver</font></a></button>
                </div>
 

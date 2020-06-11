@@ -25,39 +25,26 @@ if (!(isset($_SESSION["Nombre"]))) {
 </head>
 <body>
      <div class="container">
-          <ul class="nav justify-content-end">
-          <li class="nav-item">
-               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="CerrarSeccion.php">Cerrar Seccion</a></button>
-               </li>
-          </ul>
+          <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+               <h5 class="my-0 mr-md-auto font-weight-normal">Kreemo Solution System</h5>
+               <nav class="my-2 my-md-0 mr-md-3">
+                    
+               </nav>
+               <a class="btn btn-outline-primary" href="CerrarSeccion.php">Cerrar Seccion</a>
+          </div>
+
           <h1 align="center">SELECCIONE EL MODULO</h1>
           <br>
           <div class="row" align="center">
-               <div class="col-sm-3" >
+               <div class="col-sm-6">
                     <div class="card">
                          <div class="card-body">
-                         <h5 class="card-title">Usuarios</h5>
-                         <a href="#" class="btn btn-primary">Ir a Usuarios</a>
+                         <h5 class="card-title">Cotización</h5>
+                         <a href="Cotizacion/Vista/ListarCotizacion.php" class="btn btn-primary">Ir a Cotización</a>
                          </div>
                     </div>
                </div>
-               <div class="col-sm-3">
-                    <div class="card">
-                         <div class="card-body">
-                         <h5 class="card-title">Tipo Usuarios</h5>
-                         <a href="#" class="btn btn-secondary">Ir a Tipo de Usuarios</a>
-                         </div>
-                    </div>
-               </div>
-               <div class="col-sm-3">
-                    <div class="card">
-                         <div class="card-body">
-                         <h5 class="card-title">Cotizacion</h5>
-                         <a href="Cotizacion/Vista/ListarCotizacion.php" class="btn btn-primary">Ir a Cotizacion</a>
-                         </div>
-                    </div>
-               </div>
-               <div class="col-sm-3">
+               <div class="col-sm-6">
                     <div class="card">
                          <div class="card-body">
                          <h5 class="card-title">Empresa</h5>

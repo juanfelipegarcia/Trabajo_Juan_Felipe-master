@@ -41,7 +41,7 @@ class CrudCotizacion{
      public function ListarCotizacion(){
           $Db = Db::Conectar();
           $ListaCotizacion = [];
-          $Sql = $Db->query('SELECT cotizacion.IdCotizacion, empresa.Empresa, cotizacion.Estado, cotizacion.Metros_Cubicos, cotizacion.Valor_Metro, cotizacion.Iva, cotizacion.Valor_Total, cotizacion.Observaciones FROM cotizacion INNER JOIN empresa ON cotizacion.IdEmpresa=empresa.IdEmpresa');
+          $Sql = $Db->query('SELECT cotizacion.IdCotizacion, empresa.Empresa, cotizacion.Estado, cotizacion.Metros_Cubicos, cotizacion.Valor_Metro, cotizacion.Iva, cotizacion.Valor_Total, cotizacion.Observaciones FROM cotizacion INNER JOIN empresa ON cotizacion.IdEmpresa=empresa.IdEmpresa ORDER BY IdCotizacion ASC');
           $Sql->execute();
 
           foreach($Sql->fetchAll() as $Cotizacion){

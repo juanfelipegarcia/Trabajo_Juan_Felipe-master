@@ -23,22 +23,25 @@ $Empresa = $CrudEmpresa::ObtenerEmpresa($_GET['IdEmpresa']);
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
-     <link rel="stylesheet" href="">
+     <link rel="stylesheet" href="../css/estiloEditarE.css">
 
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      
 </head>
 <body >
-     <div class="container col-md-3">
-          <ul class="nav justify-content-end">
-               <li class="nav-item">
-               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../CerrarSeccion.php">Cerrar Seccion</a></button>
-               </li>
-          </ul>
+     <div class="container">
+          <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+               <h5 class="my-0 mr-md-auto font-weight-normal">Kreemo Solution System</h5>
+               <nav class="my-2 my-md-0 mr-md-3">
+                    <a class="p-2 text-dark" href="listarEmpresa.php">Empresas</a>
+                    <a class="p-2 text-dark" href="../../Cotizacion/Vista/ListarCotizacion.php">Cotizaciones</a>
+               </nav>
+               <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Seccion</a>
+          </div>
           <h1 align="center">Editar Empresa</h1>
           <br>
-          <form action="../Controlador/ControladorEmpresa.php" method="post" id="FrmEditarEmpresa" name="FrmCrearEmpresa">
+          <form class="form-signin" action="../Controlador/ControladorEmpresa.php" method="post" id="FrmEditarEmpresa" name="FrmCrearEmpresa" align-items: "center">
                <div class="form-row" >
                     <div class="form-group col-md-3">
                          <label for="">Empresa N°</label>
@@ -75,7 +78,7 @@ $Empresa = $CrudEmpresa::ObtenerEmpresa($_GET['IdEmpresa']);
                <button type="submit" class="btn btn-primary">Editar Empresa</button>
                </form>
                <br>
-               <div class="form-row" align="center">
+               <div align="center">
                <button  type="" class="btn btn-primary"><a href="ListarEmpresa.php"><font color="#ffffff">Volver</font></a></button>
                </div>
 
