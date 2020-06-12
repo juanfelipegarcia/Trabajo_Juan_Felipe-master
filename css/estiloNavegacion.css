@@ -1,0 +1,13 @@
+footer
+{
+    
+     color: black;
+     bottom: 0;
+     position: fixed;
+     text-align: center;
+     width: 80%;
+     height: 50px;
+     background: rgba(241, 238, 238, 0.1);
+
+     
+}

@@ -10,6 +10,7 @@
     
 </head>
 <body class="text-center">
+     <div class="container">
      <form class="form-signin" action="Usuario/Controlador/ControladorUsuario.php" method="post" id="FrmInicioSeccion" name="FrmInicioSeccion">
           <img class="mb-4" src="img/kreemo_nombres.png" alt="" width="100" height="100">
           <h1 class="h3 mb-3 font-weight-normal">Ingreso de Usuario</h1>
@@ -24,7 +25,14 @@
           <label style="color: red;" id="validacion_clave2"></label>
           <button class="btn btn-lg btn-primary btn-block" type="submit" name="Acceder" id="Acceder" value="Acceder">Ingresar</button>
           <p class="mt-5 mb-3 text-muted">Kreemo Solution System &copy; 2020</p>
-          </form>
+     </form>
+     <footer class="footer mt-auto py-4">
+          <div class="container">
+          <span class="text-muted">Trabajo PHP  Realizado por Juan Felipe Garcia Duque C.C 15.442.460 ADSI</span>
+          </div>
+     </footer>
+
+     </div>     
 </body>
 <script src="js/validacionInicio.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

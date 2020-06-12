@@ -55,7 +55,10 @@ $mysqli = new mysqli('localhost', 'root', '', 'pruebaphp');
                               <?php
                               $query = $mysqli -> query ("SELECT * FROM empresa");
                               while ($valores = mysqli_fetch_array($query)) {
-                              echo '<option value="'.$valores[IdEmpresa].'">'.$valores[Empresa].'</option>';
+                              ?>
+
+                              <option value="<?php echo $valores['IdEmpresa']?>" <?php if($Cotizacion->getIdEmpresa()==$valores['IdEmpresa']){ ?> selected <?php } ?> ><?php echo $valores['Empresa']?></option>;
+                              <?php
                               }
                               ?>
                          </select>
@@ -111,8 +114,13 @@ $mysqli = new mysqli('localhost', 'root', '', 'pruebaphp');
                <div align="center">
                <button  type="" class="btn btn-primary"><a href="ListarCotizacion.php"><font color="#ffffff">Volver</font></a></button>
                </div>
-
      </div>
+     <br>
+     <footer class="footer " align="center">
+          <div class="container">
+          <span>Trabajo PHP  Realizado por Juan Felipe Garcia Duque C.C 15.442.460 ADSI</span>
+          </div>
+     </footer>
 </body>
 <script src="../js/validaciones2.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -55,13 +55,18 @@ $mysqli = new mysqli('localhost', 'root', '', 'pruebaphp');
                     </div>
                </div>
                <div class="form-row" >
-                    <div class="form-group col-md-6">
-                         <label for="inputState">Estado</label>
+                    <div class="form-group col-md-8">
+                         <label for="">Estado</label>
                          <label class="validacion" id="validacion_Estado"></label>
+                         <!-- <select id="Estado" name="Estado" class="form-control">
+                         <option value="0" >Seleccione una Empresa</option>
+                         <option value="Activo" >Activo</option>
+                         <option value="Inactivo" >Inactivo</option>
+                         </select> -->
                          <input type="text" class="form-control" id="Estado" name="Estado">
                          <label class="validacion" id="validacion_Estado2"></label>
                     </div>
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-4">
                          <label for="inputPassword4">Metros m<sup>3</sup></label>
                          <label class="validacion" id="validacion_MetrosCubicos"></label>
                          <input type="text" class="form-control solo_numeros" id="Metros_Cubicos" name="Metros_Cubicos">
@@ -101,8 +106,13 @@ $mysqli = new mysqli('localhost', 'root', '', 'pruebaphp');
                <div align="center">
                <button  type="" class="btn btn-primary"><a href="ListarCotizacion.php"><font color="#ffffff">Volver</font></a></button>
                </div>
-
      </div>
+     <br>
+     <footer class="footer " align="center">
+          <div class="container">
+          <span>Trabajo PHP  Realizado por Juan Felipe Garcia Duque C.C 15.442.460 ADSI</span>
+          </div>
+     </footer>
 </body>
 <script src="../js/validaciones.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
