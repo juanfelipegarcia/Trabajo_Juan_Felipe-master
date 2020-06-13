@@ -36,10 +36,32 @@ $(document).ready(function() {
 
           if (validado==3)
           {
+               
                document.FrmCrearEmpresa.submit();
+
+               
+               Swal.fire({
+                    title:'Registro Exitoso',text:'La reserva a sido registrada',icon:'success',footer:'<span class="rojo">Agencia de Viajes',
+                    //width: '50%',
+                    padding:'1rem',
+                    //background:'#000',
+                    backdrop:true,
+                    //toast: true,
+                    position:'center',
+               });
           }
           else{
-               alert("Campos pendientes por validar");
+               
+               Swal.fire({
+                    title:'Error en la creacion',text:'Campos pendientes por validar',icon:'error',footer:'<span class="rojo">Kreemo Solution Systems',
+                    //width: '50%',
+                    padding:'1rem',
+                    //background:'#000',
+                    backdrop:true,
+                    //toast: true,
+                    position:'center',
+               });
+               //alert("Campos pendientes por validar");
                validado = 0;
           }
 
