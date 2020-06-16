@@ -26,17 +26,18 @@ $mysqli = new mysqli('localhost', 'root', '', 'pruebaphp');
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Document</title>
      <link rel="stylesheet" href="../css/estiloEditarCotizacion.css">
-
+     
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
      <div class="container">
           <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-               <h5 class="my-0 mr-md-auto font-weight-normal">Kreemo Solution System</h5>
+               <h5 class="my-0 mr-md-auto font-weight-normal"><a class="p-2 text-dark" href="../../Navegacion.php">Kreemo Solution System</a></h5>
                <nav class="my-2 my-md-0 mr-md-3">
-                    <a class="p-2 text-dark" href="listarCotizacion.php">Cotizaciones</a>
+                    <a class="p-2 text-dark" href="listarCotizacion.php">Cotizaciónes</a>
                     <a class="p-2 text-dark" href="../../Empresa/Vista/ListarEmpresa.php">Empresas</a>
+                    <a class="p-2 text-dark" href="../../Estado/Vista/ListarEstado.php">Estados</a>
                </nav>
                <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Seccion</a>
           </div>
@@ -71,7 +72,18 @@ $mysqli = new mysqli('localhost', 'root', '', 'pruebaphp');
                     <div class="form-group col-md-6">
                          <label for="inputState">Estado</label>
                          <label class="validacion" id="validacion_Estado"></label>
-                         <input type="text" class="form-control" id="Estado" name="Estado" value="<?php echo $Cotizacion->getEstado();?>">
+                         <select id="IdEstado"  name= "IdEstado" class="form-control">
+                              <option value="0" >Seleccione un Estado</option>
+                              <?php
+                              $query = $mysqli -> query ("SELECT * FROM estado");
+                              while ($valores = mysqli_fetch_array($query)) {
+                              ?>
+                              <option value="<?php echo $valores['IdEstado']?>" <?php if($Cotizacion->getIdEstado()==$valores['IdEstado']){ ?> selected <?php } ?> ><?php echo $valores['Estado']?></option>;
+                              <?php
+                              }
+                              ?>
+                         </select>
+
                          <label class="validacion" id="validacion_Estado2"></label>
                     </div>
                     <div class="form-group col-md-6">

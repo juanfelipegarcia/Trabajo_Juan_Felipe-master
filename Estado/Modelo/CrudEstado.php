@@ -100,8 +100,8 @@ class CrudEstado{
                //echo $e->getMessage();//Mostrar errores en la insercion
                ?>
                <script>
-               alert("No se puede elimitar la empresa, esta  esta  siendo utilizada en una  o mas cotizaciones");
-               document.location.href="../Vista/ListarEmpresa.php";
+               alert("No se puede elimitar El Estado, este  esta  siendo utilizada en una  o mas cotizaciones");
+               document.location.href="../Vista/ListarEstado.php";
                </script>
                <?php
                die();

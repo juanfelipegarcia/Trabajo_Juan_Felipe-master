@@ -10,7 +10,7 @@ if (isset($_POST["Crear"])) {
 
      $Cotizacion->setIdCotizacion(null);
      $Cotizacion->setIdEmpresa($_POST["IdEmpresa"]);
-     $Cotizacion->setEstado($_POST["Estado"]);
+     $Cotizacion->setIdEstado($_POST["IdEstado"]);
      $Cotizacion->setMetros_Cubicos($_POST["Metros_Cubicos"]);
      $Cotizacion->setValor_Metro($_POST["Valor_Metro"]);
      $Cotizacion->setIva($_POST["Iva"]);
@@ -23,7 +23,7 @@ elseif(isset($_POST["Editar"])) {
 
      $Cotizacion->setIdCotizacion($_POST["IdCotizacion"]);
      $Cotizacion->setIdEmpresa($_POST["IdEmpresa"]);
-     $Cotizacion->setEstado($_POST["Estado"]);
+     $Cotizacion->setIdEstado($_POST["IdEstado"]);
      $Cotizacion->setMetros_Cubicos($_POST["Metros_Cubicos"]);
      $Cotizacion->setValor_Metro($_POST["Valor_Metro"]);
      $Cotizacion->setIva($_POST["Iva"]);

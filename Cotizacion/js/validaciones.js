@@ -36,7 +36,7 @@ $(document).ready(function() {
                $("#validacion_empresa2").text("");
                validado++;
           }
-          if ($("#Estado").val() == 0) {
+          if ($("#IdEstado").val() == 0) {
 
                $("#validacion_Estado").text("*");
                $("#validacion_Estado2").text("Debe Seleccionar un Estado");

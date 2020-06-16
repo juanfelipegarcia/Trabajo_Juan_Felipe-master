@@ -5,7 +5,7 @@ class Cotizacion{
      // Parametros de ENTRADA
      private $IdCotizacion;
      private $IdEmpresa;
-     private $Estado;
+     private $IdEstado;
      private $Metros_Cubicos;
      private $Valor_Metro;
      private $Iva;
@@ -29,11 +29,11 @@ class Cotizacion{
      public function getIdEmpresa(){
           return $this->IdEmpresa;
      }
-     public function setEstado($Estado){
-          $this->Estado = $Estado;
+     public function setIdEstado($IdEstado){
+          $this->IdEstado = $IdEstado;
      }
-     public function getEstado(){
-          return $this->Estado;
+     public function getIdEstado(){
+          return $this->IdEstado;
      }
      public function setMetros_Cubicos($Metros_Cubicos){
           $this->Metros_Cubicos = $Metros_Cubicos;

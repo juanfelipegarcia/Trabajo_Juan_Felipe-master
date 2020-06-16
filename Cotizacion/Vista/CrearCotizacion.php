@@ -28,10 +28,11 @@ $mysqli = new mysqli('localhost', 'root', '', 'pruebaphp');
 <body>
      <div class="container">
           <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-               <h5 class="my-0 mr-md-auto font-weight-normal">Kreemo Solution System</h5>
+               <h5 class="my-0 mr-md-auto font-weight-normal"><a class="p-2 text-dark" href="../../Navegacion.php">Kreemo Solution System</a></h5>
                <nav class="my-2 my-md-0 mr-md-3">
-                    <a class="p-2 text-dark" href="listarCotizacion.php">Cotizaciones</a>
+                    <a class="p-2 text-dark" href="listarCotizacion.php">Cotizaciónes</a>
                     <a class="p-2 text-dark" href="../../Empresa/Vista/ListarEmpresa.php">Empresas</a>
+                    <a class="p-2 text-dark" href="../../Estado/Vista/ListarEstado.php">Estados</a>
                </nav>
                <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Seccion</a>
           </div>
@@ -59,12 +60,16 @@ $mysqli = new mysqli('localhost', 'root', '', 'pruebaphp');
                     <div class="form-group col-md-8">
                          <label for="">Estado</label>
                          <label class="validacion" id="validacion_Estado"></label>
-                         <!-- <select id="Estado" name="Estado" class="form-control">
-                         <option value="0" >Seleccione una Empresa</option>
-                         <option value="Activo" >Activo</option>
-                         <option value="Inactivo" >Inactivo</option>
-                         </select> -->
-                         <input type="text" class="form-control" id="Estado" name="Estado">
+                         <!-- <input type="text" class="form-control" id="Estado" name="Estado"> -->
+                         <select id="IdEstado"  name= "IdEstado" class="form-control">
+                              <option value="0" >Seleccione un Estado</option>
+                              <?php
+                              $query = $mysqli -> query ("SELECT * FROM estado");
+                              while ($valores = mysqli_fetch_array($query)) {
+                              echo '<option value="'.$valores[IdEstado].'">'.$valores[Estado].'</option>';
+                              }
+                              ?>
+                         </select>
                          <label class="validacion" id="validacion_Estado2"></label>
                     </div>
                     <div class="form-group col-md-4">

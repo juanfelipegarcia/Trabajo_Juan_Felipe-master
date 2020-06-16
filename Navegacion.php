@@ -63,6 +63,25 @@ if (!(isset($_SESSION["Nombre"]))) {
                </div>
           </div>
           <br>
+          <div class="row" align="center">
+               <div class="col-sm-6">
+                    <div class="card">
+                         <div class="card-body">
+                         <h5 class="card-title">Productos</h5>
+                         <a href="" class="btn btn-primary">Ir a Productos</a>
+                         </div>
+                    </div>
+               </div>
+               <div class="col-sm-6">
+                    <div class="card">
+                         <div class="card-body">
+                         <h5 class="card-title">Facturacion</h5>
+                         <a href="" class="btn btn-primary">Ir a Facturacion</a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <br>
           <footer class="footer ">
           <div class="container">
           <span>Trabajo PHP  Realizado por Juan Felipe Garcia Duque C.C 15.442.460 ADSI</span>

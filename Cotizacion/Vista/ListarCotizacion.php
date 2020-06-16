@@ -30,9 +30,10 @@ $ListaCotizacion = $CrudCotizacion->ListarCotizacion();
 <body>
      <div class="container">
           <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-               <h5 class="my-0 mr-md-auto font-weight-normal">Kreemo Solution System</h5>
+               <h5 class="my-0 mr-md-auto font-weight-normal"><a class="p-2 text-dark" href="../../Navegacion.php">Kreemo Solution System</a></h5>
                <nav class="my-2 my-md-0 mr-md-3">
                     <a class="p-2 text-dark" href="../../Empresa/Vista/ListarEmpresa.php">Empresas</a>
+                    <a class="p-2 text-dark" href="../../Estado/Vista/ListarEstado.php">Estado</a>
                </nav>
                <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Seccion</a>
           </div>
@@ -70,7 +71,7 @@ $ListaCotizacion = $CrudCotizacion->ListarCotizacion();
                     <tr>
                     <td><?php echo $Cotizacion->getIdCotizacion();?></td>
                     <td><?php echo $Cotizacion->getIdEmpresa();?></td>
-                    <td><?php echo $Cotizacion->getEstado();?></td>
+                    <td><?php echo $Cotizacion->getIdEstado();?></td>
                     <td><?php echo $Cotizacion->getMetros_cubicos();?></td>
                     <td><?php echo $Cotizacion->getValor_Metro();?></td>
                     <td><?php echo $Cotizacion->getIva();?></td>

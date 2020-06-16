@@ -10,10 +10,10 @@ class CrudCotizacion{
      public function InsertarCotizacion($Cotizacion){
           $Db = Db::Conectar();// conectar a la base de Datos
           //definir la insercion a realizar
-          $Insert = $Db->prepare('INSERT INTO cotizacion VALUES(:IdCotizacion,:IdEmpresa,:Estado,:Metros_Cubicos,:Valor_Metro,:Iva,:Valor_Total,:Observaciones)');
+          $Insert = $Db->prepare('INSERT INTO cotizacion VALUES(:IdCotizacion,:IdEmpresa,:IdEstado,:Metros_Cubicos,:Valor_Metro,:Iva,:Valor_Total,:Observaciones)');
           $Insert->bindValue('IdCotizacion', $Cotizacion->getIdCotizacion());
           $Insert->bindValue('IdEmpresa', $Cotizacion->getIdEmpresa());
-          $Insert->bindValue('Estado', $Cotizacion->getEstado());
+          $Insert->bindValue('IdEstado', $Cotizacion->getIdEstado());
           $Insert->bindValue('Metros_Cubicos', $Cotizacion->getMetros_Cubicos());
           $Insert->bindValue('Valor_Metro', $Cotizacion->getValor_Metro());
           $Insert->bindValue('Iva', $Cotizacion->getIva());
@@ -41,7 +41,7 @@ class CrudCotizacion{
      public function ListarCotizacion(){
           $Db = Db::Conectar();
           $ListaCotizacion = [];
-          $Sql = $Db->query('SELECT cotizacion.IdCotizacion, empresa.Empresa, cotizacion.Estado, cotizacion.Metros_Cubicos, cotizacion.Valor_Metro, cotizacion.Iva, cotizacion.Valor_Total, cotizacion.Observaciones FROM cotizacion INNER JOIN empresa ON cotizacion.IdEmpresa=empresa.IdEmpresa ORDER BY IdCotizacion ASC');
+          $Sql = $Db->query('SELECT cotizacion.IdCotizacion, empresa.Empresa, estado.Estado, cotizacion.Metros_Cubicos, cotizacion.Valor_Metro, cotizacion.Iva, cotizacion.Valor_Total, cotizacion.Observaciones FROM cotizacion INNER JOIN empresa ON cotizacion.IdEmpresa=empresa.IdEmpresa INNER JOIN estado ON cotizacion.Estado = estado.IdEstado ORDER BY IdCotizacion ASC');
           $Sql->execute();
 
           foreach($Sql->fetchAll() as $Cotizacion){
@@ -49,7 +49,7 @@ class CrudCotizacion{
 
                $MyCotizacion->setIdCotizacion($Cotizacion['IdCotizacion']);
                $MyCotizacion->setIdEmpresa($Cotizacion['Empresa']);
-               $MyCotizacion->setEstado($Cotizacion['Estado']);
+               $MyCotizacion->setIdEstado($Cotizacion['Estado']);
                $MyCotizacion->setMetros_Cubicos($Cotizacion['Metros_Cubicos']);
                $MyCotizacion->setValor_Metro($Cotizacion['Valor_Metro']);
                $MyCotizacion->setIva($Cotizacion['Iva']);
@@ -72,7 +72,7 @@ class CrudCotizacion{
                $Cotizacion = $Sql->fetch();
                $MyCotizacion->setIdCotizacion($Cotizacion['IdCotizacion']);
                $MyCotizacion->setIdEmpresa($Cotizacion['IdEmpresa']);
-               $MyCotizacion->setEstado($Cotizacion['Estado']);
+               $MyCotizacion->setIdEstado($Cotizacion['Estado']);
                $MyCotizacion->setMetros_Cubicos($Cotizacion['Metros_Cubicos']);
                $MyCotizacion->setValor_Metro($Cotizacion['Valor_Metro']);
                $MyCotizacion->setIva($Cotizacion['Iva']);
@@ -89,10 +89,10 @@ class CrudCotizacion{
      public function ModificarCotizacion($Cotizacion){
 
           $Db = Db::Conectar();
-          $Sql = $Db->prepare('UPDATE cotizacion SET IdEmpresa=:IdEmpresa, Estado=:Estado, Metros_Cubicos=:Metros_Cubicos, Valor_Metro=:Valor_Metro, Iva=:Iva, Valor_Total=:Valor_Total,Observaciones=:Observaciones WHERE IdCotizacion=:IdCotizacion');
+          $Sql = $Db->prepare('UPDATE cotizacion SET IdEmpresa=:IdEmpresa, Estado=:IdEstado, Metros_Cubicos=:Metros_Cubicos, Valor_Metro=:Valor_Metro, Iva=:Iva, Valor_Total=:Valor_Total,Observaciones=:Observaciones WHERE IdCotizacion=:IdCotizacion');
           $Sql->bindValue('IdCotizacion', $Cotizacion->getIdCotizacion());
           $Sql->bindValue('IdEmpresa', $Cotizacion->getIdEmpresa());
-          $Sql->bindValue('Estado', $Cotizacion->getEstado());
+          $Sql->bindValue('IdEstado', $Cotizacion->getIdEstado());
           $Sql->bindValue('Metros_Cubicos', $Cotizacion->getMetros_Cubicos());
           $Sql->bindValue('Valor_Metro', $Cotizacion->getValor_Metro());
           $Sql->bindValue('Iva', $Cotizacion->getIva());
