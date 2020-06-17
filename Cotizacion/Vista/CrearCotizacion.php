@@ -38,7 +38,7 @@ $mysqli = new mysqli('localhost', 'root', '', 'pruebaphp');
           </div>
           <h1 align="center">Crear Cotización</h1>
           <br>
-          <form class="form-signin" action="../Controlador/ControladorCotizacion.php" method="post" id="FrmCrearCotizacion" name="FrmCrearCotizacion">
+          <form class="form-signin col-md-8" action="../Controlador/ControladorCotizacion.php" method="post" id="FrmCrearCotizacion" name="FrmCrearCotizacion">
 
                <div class="form-row" >
                     <div class="form-group col-md-8">

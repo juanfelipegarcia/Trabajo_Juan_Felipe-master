@@ -76,7 +76,7 @@ if (!(isset($_SESSION["Nombre"]))) {
                     <div class="card">
                          <div class="card-body">
                          <h5 class="card-title">Facturacion</h5>
-                         <a href="" class="btn btn-primary">Ir a Facturacion</a>
+                         <a href="Facturacion/Vista/ListarFactura.php" class="btn btn-primary">Ir a Facturacion</a>
                          </div>
                     </div>
                </div>
