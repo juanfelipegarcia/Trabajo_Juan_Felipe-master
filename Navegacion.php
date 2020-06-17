@@ -68,7 +68,7 @@ if (!(isset($_SESSION["Nombre"]))) {
                     <div class="card">
                          <div class="card-body">
                          <h5 class="card-title">Productos</h5>
-                         <a href="" class="btn btn-primary">Ir a Productos</a>
+                         <a href="Producto/Vista/ListarProducto.php" class="btn btn-primary">Ir a Productos</a>
                          </div>
                     </div>
                </div>
