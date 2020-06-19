@@ -31,7 +31,7 @@ if (!(isset($_SESSION["Nombre"]))) {
                <nav class="my-2 my-md-0 mr-md-3">
                     
                </nav>
-               <a class="btn btn-outline-primary" href="CerrarSeccion.php">Cerrar Seccion</a>
+               <a class="btn btn-outline-primary" href="CerrarSeccion.php">Cerrar Sesion</a>
           </div>
 
           <h1 align="center">SELECCIONE EL MODULO</h1>

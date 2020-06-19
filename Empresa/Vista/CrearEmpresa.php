@@ -30,9 +30,11 @@ if (!(isset($_SESSION["Nombre"]))) {
                     <a class="p-2 text-dark" href="listarEmpresa.php">Empresas</a>
                     <a class="p-2 text-dark" href="../../Cotizacion/Vista/ListarCotizacion.php">Cotizaciónes</a>
                     <a class="p-2 text-dark" href="../../Estado/Vista/ListarEstado.php">Estados</a>
+                    <a class="p-2 text-dark" href="../../facturacion/Vista/ListarFactura.php">Facturas</a>
+                    <a class="p-2 text-dark" href="../../Producto/Vista/ListarProducto.php">Producto</a>
                     
                </nav>
-               <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Seccion</a>
+               <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Sesion</a>
           </div>
           <h1 align="center">Crear Empresa</h1>
           <br>

@@ -34,18 +34,20 @@ $ListaProducto = $CrudProducto->ListarProducto();
                <nav class="my-2 my-md-0 mr-md-3">
                     <a class="p-2 text-dark" href="../../Empresa/Vista/ListarEmpresa.php">Empresas</a>
                     <a class="p-2 text-dark" href="../../Cotizacion/Vista/ListarCotizacion.php">Cotizaciónes</a>
+                    <a class="p-2 text-dark" href="../../facturacion/Vista/ListarFactura.php">Facturas</a>
+                    <a class="p-2 text-dark" href="../../Estado/Vista/ListarEstado.php">Estado</a>
                </nav>
-               <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Seccion</a>
+               <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Sesion</a>
           </div>
 
-          <h1 align="center">ESTADOS</h1>
+          <h1 align="center">PRODUCTOS</h1>
           <br>
           <ul class="nav nav-fill">
                <li class="nav-item">
-               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="CrearProducto.php">Crear Nuevo Estado</a></button>
+               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="CrearProducto.php">Crear un Producto</a></button>
                </li>
                <li class="nav-item">
-               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../TCPDF/examples/reportepdfempresa.php" target="_blank">Reporte de  Estados</a></button>
+               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../TCPDF/examples/reportepdfempresa.php" target="_blank">Reporte de  Productos</a></button>
                </li>
           </ul>
           <br>

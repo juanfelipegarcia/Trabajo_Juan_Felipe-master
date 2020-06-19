@@ -6,9 +6,19 @@ if (!(isset($_SESSION["Nombre"]))) {
  header("location:../../Index.php");    
 }
 
+require_once('../../conexion.php');
+require_once('../../Empresa/Modelo/Empresa.php');
+require_once('../../Empresa/Modelo/CrudEmpresa.php');
+require_once('../../Producto/Modelo/Producto.php');
+require_once('../../Producto/Modelo/CrudProducto.php');
 
+$Empresa = new Empresa();
+$CrudEmpresa =new CrudEmpresa();
+$ListaEmpresa = $CrudEmpresa -> ListarEmpresa();
 
-$mysqli = new mysqli('localhost', 'root', '', 'pruebaphp');
+$Producto = new Producto();
+$CrudProducto = new CrudProducto();
+$ListaProducto = $CrudProducto -> ListarProducto();
 
 ?>
 
@@ -28,11 +38,13 @@ $mysqli = new mysqli('localhost', 'root', '', 'pruebaphp');
           <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
                <h5 class="my-0 mr-md-auto font-weight-normal"><a class="p-2 text-dark" href="../../Navegacion.php">Kreemo Solution System</a></h5>
                <nav class="my-2 my-md-0 mr-md-3">
-                    <a class="p-2 text-dark" href="listarCotizacion.php">Cotizaciónes</a>
+                    <a class="p-2 text-dark" href="ListarFactura.php">Facturas</a>
                     <a class="p-2 text-dark" href="../../Empresa/Vista/ListarEmpresa.php">Empresas</a>
+                    <a class="p-2 text-dark" href="../../Cotizacion/Vista/ListarCotizacion.php">Cotizaciónes</a>
                     <a class="p-2 text-dark" href="../../Estado/Vista/ListarEstado.php">Estados</a>
+                    <a class="p-2 text-dark" href="../../Producto/Vista/ListarProducto.php">Producto</a>
                </nav>
-               <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Seccion</a>
+               <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Sesion</a>
           </div>
      <h1 align="center">Facturación</h1>
      <br>
@@ -43,10 +55,12 @@ $mysqli = new mysqli('localhost', 'root', '', 'pruebaphp');
                <select id="IdCliente"  name= "IdCliente" class="form-control">
                     <option value="0" >Seleccione una Empresa</option>
                          <?php
-                         $query = $mysqli -> query ("SELECT * FROM empresa");
-                         while ($valores = mysqli_fetch_array($query)) {
-                         echo '<option value="'.$valores[IdEmpresa].'">'.$valores[Empresa].'</option>';
+                         foreach ($ListaEmpresa as $Empresa){
+                              ?>
+                              <option value="<?php echo $Empresa->getIdEmpresa();?>"><?php echo $Empresa->getEmpresa();?></option>
+                              <?php
                          }
+                         
                          ?>
                </select>
           </div>
@@ -55,9 +69,10 @@ $mysqli = new mysqli('localhost', 'root', '', 'pruebaphp');
                <select id="IdProducto"  name= "IdProducto" class="form-control">
                     <option value="0" >Seleccione una Producto</option>
                          <?php
-                         $query = $mysqli -> query ("SELECT * FROM producto");
-                         while ($valores = mysqli_fetch_array($query)) {
-                         echo '<option value="'.$valores[IdProducto].'">'.$valores[Producto].'</option>';
+                         foreach ($ListaProducto as $Producto){
+                              ?>
+                              <option value="<?php echo $Producto->getIdProducto();?>"><?php echo $Producto->getProducto();?></option>
+                              <?php
                          }
                          ?>
                </select>

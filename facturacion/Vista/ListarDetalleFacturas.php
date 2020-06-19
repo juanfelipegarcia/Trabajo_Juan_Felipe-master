@@ -32,10 +32,13 @@ $ListaDetalleFactura = $CrudDetalleFactura->ListarDetalleFactura();
           <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
                <h5 class="my-0 mr-md-auto font-weight-normal"><a class="p-2 text-dark" href="../../Navegacion.php">Kreemo Solution System</a></h5>
                <nav class="my-2 my-md-0 mr-md-3">
+                    <a class="p-2 text-dark" href="ListarFactura.php">Facturas</a>
                     <a class="p-2 text-dark" href="../../Empresa/Vista/ListarEmpresa.php">Empresas</a>
                     <a class="p-2 text-dark" href="../../Cotizacion/Vista/ListarCotizacion.php">Cotizaciónes</a>
+                    <a class="p-2 text-dark" href="../../Estado/Vista/ListarEstado.php">Estados</a>
+                    <a class="p-2 text-dark" href="../../Producto/Vista/ListarProducto.php">Producto</a>
                </nav>
-               <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Seccion</a>
+               <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Sesion</a>
           </div>
 
           <h1 align="center">DETALLE DE FACTURAS</h1>

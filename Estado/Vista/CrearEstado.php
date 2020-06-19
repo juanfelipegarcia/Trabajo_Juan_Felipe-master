@@ -30,9 +30,11 @@ if (!(isset($_SESSION["Nombre"]))) {
                     <a class="p-2 text-dark" href="ListarEstado.php">Estados</a>
                     <a class="p-2 text-dark" href="../../Empresa/Vista/ListarEmpresa.php">Empresas</a>
                     <a class="p-2 text-dark" href="../../Cotizacion/Vista/ListarCotizacion.php">Cotizaciónes</a>
+                    <a class="p-2 text-dark" href="../../facturacion/Vista/ListarFactura.php">Facturas</a>
+                    <a class="p-2 text-dark" href="../../Producto/Vista/ListarProducto.php">Producto</a>
                     
                </nav>
-               <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Seccion</a>
+               <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Sesion</a>
           </div>
           <h1 align="center">Crear Estado</h1>
           <br>
@@ -62,7 +64,7 @@ if (!(isset($_SESSION["Nombre"]))) {
           </div>
      </footer>
 </body>
-<script src="../js/validacionesCrear.js"></script>
+<script src="../js/validaciones.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

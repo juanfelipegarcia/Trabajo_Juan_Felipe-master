@@ -34,8 +34,10 @@ $ListaCotizacion = $CrudCotizacion->ListarCotizacion();
                <nav class="my-2 my-md-0 mr-md-3">
                     <a class="p-2 text-dark" href="../../Empresa/Vista/ListarEmpresa.php">Empresas</a>
                     <a class="p-2 text-dark" href="../../Estado/Vista/ListarEstado.php">Estado</a>
+                    <a class="p-2 text-dark" href="../../facturacion/Vista/ListarFactura.php">Facturas</a>
+                    <a class="p-2 text-dark" href="../../Producto/Vista/ListarProducto.php">Producto</a>
                </nav>
-               <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Seccion</a>
+               <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Sesion</a>
           </div>
 
      <h1 align="center">COTIZACIÓNES</h1>

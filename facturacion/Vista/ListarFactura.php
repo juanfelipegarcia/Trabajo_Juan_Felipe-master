@@ -34,8 +34,10 @@ $ListaFactura = $CrudFactura->ListarFactura();
                <nav class="my-2 my-md-0 mr-md-3">
                     <a class="p-2 text-dark" href="../../Empresa/Vista/ListarEmpresa.php">Empresas</a>
                     <a class="p-2 text-dark" href="../../Cotizacion/Vista/ListarCotizacion.php">Cotizaciónes</a>
+                    <a class="p-2 text-dark" href="../../Estado/Vista/ListarEstado.php">Estados</a>
+                    <a class="p-2 text-dark" href="../../Producto/Vista/ListarProducto.php">Producto</a>
                </nav>
-               <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Seccion</a>
+               <a class="btn btn-outline-primary" href="../../CerrarSeccion.php">Cerrar Sesion</a>
           </div>
 
           <h1 align="center">FACTURAS</h1>
@@ -48,7 +50,7 @@ $ListaFactura = $CrudFactura->ListarFactura();
                <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="ListarDetalleFacturas.php">Detalle Facturas</a></button>
                </li>
                <li class="nav-item">
-               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../TCPDF/examples/reportepdfempresa.php" target="_blank">Reporte de  Estados</a></button>
+               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../TCPDF/examples/reportepdfempresa.php" target="_blank">Reporte de Facturas</a></button>
                </li>
           </ul>
           <br>
