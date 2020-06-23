@@ -61,9 +61,9 @@ $Producto = $CrudProducto::ObtenerProducto($_GET['IdProducto']);
                          <label class="validacion" id="validacion_producto2"></label>
                     </div>
                     <div class="form-group col-md-6">
-                         <label for="">Producto</label>
+                         <label for="">Precio</label>
                          <label class="validacion" id="validacion_precio"></label>
-                         <input type="text" class="form-control" id="Precio" name="Precio" value="<?php echo $Producto->getPrecio();?>">
+                         <input type="text" class="form-control solo_numeros" id="Precio" name="Precio" value="<?php echo $Producto->getPrecio();?>">
                          <label class="validacion" id="validacion_precio2"></label>
                     </div>
                </div>
@@ -73,7 +73,7 @@ $Producto = $CrudProducto::ObtenerProducto($_GET['IdProducto']);
                </form>
                <br>
                <div align="center">
-               <button  type="" class="btn btn-primary"><a href="ListarProducto.php"><font color="#ffffff">Volver</font></a></button>
+               <a class="btn btn-outline-primary" href="ListarProducto.php">Volver</a>
                </div>
 
      </div>

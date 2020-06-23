@@ -1,47 +1,37 @@
 $(document).ready(function() {
-     $("#FrmCrearEmpresa").submit(function(event){
+     $("#FrmCrearProducto").submit(function(event){
           event.preventDefault();
 
           let validado=0;
 
-          if ($("#Empresa").val().length == 0) {
+          if ($("#Producto").val().length == 0) {
 
-               $("#validacion_empresa").text("*");
-               $("#validacion_empresa2").text("Debe Seleccionar una Empresa");
+               $("#validacion_producto").text("*");
+               $("#validacion_producto2").text("Debe ingresar un producto");
           }else{
 
-               $("#validacion_empresa").text("");
-               $("#validacion_empresa2").text("");
+               $("#validacion_producto").text("");
+               $("#validacion_producto2").text("");
                validado++;
           }
-          if ($("#Ciudad").val() == 0) {
+          if ($("#Precio").val() == 0) {
 
-               $("#validacion_Ciudad").text("*");
-               $("#validacion_Ciudad2").text("Debe Ingresar una Ciudad");
+               $("#validacion_precio").text("*");
+               $("#validacion_precio2").text("Debe Ingresar el precio");
           }else{
-               $("#validacion_Ciudad").text("");
-               $("#validacion_Ciudad2").text("");
-               validado++;
-          }
-
-          if ($("#Direccion").val() == 0) {
-
-               $("#validacion_Direccion").text("*");
-               $("#validacion_Direccion2").text("Debe Digitar la Direccion");
-          }else{
-               $("#validacion_Direccion").text("");
-               $("#validacion_Direccion2").text("");
+               $("#validacion_precio").text("");
+               $("#validacion_precio2").text("");
                validado++;
           }
 
-          if (validado==3)
+          if (validado==2)
           {
                
-               document.FrmCrearEmpresa.submit();
+               document.FrmCrearProducto.submit();
 
                
                Swal.fire({
-                    title:'Registro Exitoso',text:'La reserva a sido registrada',icon:'success',footer:'<span class="rojo">Agencia de Viajes',
+                    title:'Registro Exitoso',text:'El producto a sido registrado',icon:'success',footer:'<span class="rojo">Agencia de Viajes',
                     //width: '50%',
                     padding:'1rem',
                     //background:'#000',
@@ -69,50 +59,70 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-     $("#FrmEditarEmpresa").submit(function(event){
+     $("#FrmEditarProducto").submit(function(event){
           event.preventDefault();
 
           let validado=0;
 
-          if ($("#Empresa").val().length == 0) {
+          if ($("#Producto").val().length == 0) {
 
-               $("#validacion_empresa").text("*");
-               $("#validacion_empresa2").text("Debe Seleccionar una Empresa");
+               $("#validacion_producto").text("*");
+               $("#validacion_producto2").text("Debe ingresar un producto");
           }else{
 
-               $("#validacion_empresa").text("");
-               $("#validacion_empresa2").text("");
+               $("#validacion_producto").text("");
+               $("#validacion_producto2").text("");
                validado++;
           }
-          if ($("#Ciudad").val() == 0) {
+          if ($("#Precio").val() == 0) {
 
-               $("#validacion_Ciudad").text("*");
-               $("#validacion_Ciudad2").text("Debe Ingresar una Ciudad");
+               $("#validacion_precio").text("*");
+               $("#validacion_precio2").text("Debe Ingresar el precio");
           }else{
-               $("#validacion_Ciudad").text("");
-               $("#validacion_Ciudad2").text("");
-               validado++;
-          }
-
-          if ($("#Direccion").val() == 0) {
-
-               $("#validacion_Direccion").text("*");
-               $("#validacion_Direccion2").text("Debe Digitar la Direccion");
-          }else{
-               $("#validacion_Direccion").text("");
-               $("#validacion_Direccion2").text("");
+               $("#validacion_precio").text("");
+               $("#validacion_precio2").text("");
                validado++;
           }
 
-          if (validado==3)
+          if (validado==2)
           {
-               document.FrmEditarEmpresa.submit();
+               
+               document.FrmEditarProducto.submit();
+
+               
+               Swal.fire({
+                    title:'Registro Exitoso',text:'El producto a sido Modificado',icon:'success',footer:'<span class="rojo">Agencia de Viajes',
+                    //width: '50%',
+                    padding:'1rem',
+                    //background:'#000',
+                    backdrop:true,
+                    //toast: true,
+                    position:'center',
+               });
           }
           else{
-               alert("Campos pendientes por validar");
+               
+               Swal.fire({
+                    title:'Error en la creacion',text:'Campos pendientes por validar',icon:'error',footer:'<span class="rojo">Kreemo Solution Systems',
+                    //width: '50%',
+                    padding:'1rem',
+                    //background:'#000',
+                    backdrop:true,
+                    //toast: true,
+                    position:'center',
+               });
+               //alert("Campos pendientes por validar");
                validado = 0;
           }
 
      });
 });
 
+$(document).ready(function(){
+
+     $(".solo_numeros").on("keyup",function(){
+          this.value = this.value.replace(/[^0-9]/g,'');
+     });
+
+
+});

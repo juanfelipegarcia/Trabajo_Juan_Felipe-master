@@ -52,7 +52,7 @@ if (!(isset($_SESSION["Nombre"]))) {
                     <div class="form-group col-md-12">
                          <label for="">Precio</label>
                          <label class="validacion" id="validacion_precio"></label>
-                         <input type="text" class="form-control" id="Precio" name="Precio">
+                         <input type="text" class="form-control solo_numeros" id="Precio" name="Precio">
                          <label class="validacion" id="validacion_precio2"></label>
                     </div>
                </div>
@@ -62,7 +62,7 @@ if (!(isset($_SESSION["Nombre"]))) {
                </form>
                <br>
                <div  align="center">
-               <button  type="" class="btn btn-primary"><a href="ListarProducto.php"><font color="#ffffff">Volver</font></a></button>
+               <a class="btn btn-outline-primary" href="ListarProducto.php">Volver</a>
                </div>
      </div>
      <br>

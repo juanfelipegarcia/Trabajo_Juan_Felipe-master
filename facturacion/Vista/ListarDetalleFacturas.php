@@ -45,7 +45,7 @@ $ListaDetalleFactura = $CrudDetalleFactura->ListarDetalleFactura();
           <br>
           <ul class="nav nav-fill">
                <li class="nav-item">
-               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../TCPDF/examples/reportepdfempresa.php" target="_blank">Reporte de  Estados</a></button>
+               <a class="btn btn-outline-primary"  href="../../TCPDF/examples/reportepdfdetallesfacturas.php" target="_blank">Reporte de  Estados</a>
                </li>
           </ul>
           <br>
@@ -80,7 +80,7 @@ $ListaDetalleFactura = $CrudDetalleFactura->ListarDetalleFactura();
                </tbody>
           </table>
 
-          <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../Navegacion.php">Volver</a></button>
+          <a class="btn btn-outline-primary"  href="listarFactura.php">Volver</a>
      </div>
      <br>
      <footer class="footer " align="center">

@@ -44,13 +44,13 @@ $ListaFactura = $CrudFactura->ListarFactura();
           <br>
           <ul class="nav nav-fill">
                <li class="nav-item">
-               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="IngresarFactura.php">Crear Factura</a></button>
+               <a class="btn btn-outline-primary"  href="IngresarFactura.php">Crear Factura</a>
                </li>
                <li class="nav-item">
-               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="ListarDetalleFacturas.php">Detalle Facturas</a></button>
+               <a class="btn btn-outline-primary"  href="ListarDetalleFacturas.php">Detalle Facturas</a>
                </li>
                <li class="nav-item">
-               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../TCPDF/examples/reportepdfempresa.php" target="_blank">Reporte de Facturas</a></button>
+               <a class="btn btn-outline-primary"  href="../../TCPDF/examples/reportepdffacturas.php" target="_blank">Reporte de Facturas</a>
                </li>
           </ul>
           <br>
@@ -80,7 +80,7 @@ $ListaFactura = $CrudFactura->ListarFactura();
                </tbody>
           </table>
 
-          <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../Navegacion.php">Volver</a></button>
+          <a class="btn btn-outline-primary"  href="../../Navegacion.php">Volver</a>
      </div>
      <br>
      <footer class="footer " align="center">

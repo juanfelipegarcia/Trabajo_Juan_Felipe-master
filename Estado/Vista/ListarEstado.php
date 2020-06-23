@@ -44,10 +44,10 @@ $ListaEstado = $CrudEstado->ListarEstado();
           <br>
           <ul class="nav nav-fill">
                <li class="nav-item">
-               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="CrearEstado.php">Crear Nuevo Estado</a></button>
+               <a class="btn btn-outline-primary"  href="CrearEstado.php">Crear Nuevo Estado</a>
                </li>
                <li class="nav-item">
-               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../TCPDF/examples/reportepdfempresa.php" target="_blank">Reporte de  Estados</a></button>
+               <a class="btn btn-outline-primary"  href="../../TCPDF/examples/reportepdfestado.php" target="_blank">Reporte de  Estados</a>
                </li>
           </ul>
           <br>
@@ -82,7 +82,7 @@ $ListaEstado = $CrudEstado->ListarEstado();
                </tbody>
           </table>
 
-          <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../Navegacion.php">Volver</a></button>
+          <a class="btn btn-outline-primary"  href="../../Navegacion.php">Volver</a>
      </div>
      <br>
      <footer class="footer " align="center">

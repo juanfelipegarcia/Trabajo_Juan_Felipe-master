@@ -83,7 +83,7 @@ $Empresa = $CrudEmpresa::ObtenerEmpresa($_GET['IdEmpresa']);
                </form>
                <br>
                <div align="center">
-               <button  type="" class="btn btn-primary"><a href="ListarEmpresa.php"><font color="#ffffff">Volver</font></a></button>
+               <a class="btn btn-outline-primary" href="ListarEmpresa.php">Volver</a>
                </div>
 
      </div>

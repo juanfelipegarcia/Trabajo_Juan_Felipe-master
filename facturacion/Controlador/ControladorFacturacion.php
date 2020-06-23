@@ -46,45 +46,28 @@ if (isset($_POST["Registrar"])){// si lapeticion se registra
                }
           }
           if ($RegistroExitoso==1) {
-               echo "Registro Detalle exitoso";
+
+               ?>
+               <script>
+          //header("location:../../index.php");
+               alert("Registro Detalle exitoso");
+               document.location.href="../Vista/IngresarFactura.php";
+               </script>
+               <?php
+               //echo "Registro Detalle exitoso";
           }
           else
           {
-               echo " Error en el Registro";
+               ?>
+               <script>
+               alert("Error en el Registro");
+               document.location.href="../Vista/IngresarFactura.php";
+               </script>
+               <?php
+               //echo " Error en el Registro";
           }
           
      }
 }
-
-
-
-
-// if (isset($_POST["Registrar"]))// si lapeticion se registra
-// {
-
-//      $Competencia->setCodigoCompetencia($_POST["CodigoCompetencia"]);//instanciar el atributo
-//      $Competencia->setNombreCompetencia($_POST["NombreCompetencia"]);// instanciar  el atributo
-//      //echo $Competencia->getNombreCompetencia();// verifica la instancia
-
-//      $CrudFactura::InsertarFactura($Competencia);// llamar al metodo para  indertar
-
-// }
-// else if (isset($_POST["Modificar"]))// si lapeticion se registra
-// {
-//      //echo "Modificar ";
-//      $Competencia->setCodigoCompetencia($_POST["CodigoCompetencia"]);//instanciar el atributo
-//      $Competencia->setNombreCompetencia($_POST["NombreCompetencia"]);// instanciar  el atributo
-//      //echo $Competencia->getNombreCompetencia();// verifica la instancia
-
-//      $CrudFactura::ModificarFactura($Competencia);// llamar al metodo para  Modificar
-
-// }
-
-// else if ($_GET['Accion'] == "EliminarCompetencia") {
-//      // echo "En Desarrollo";
-//      // echo $_GET["CodigoCompetencia"];
-//      $CrudFactura::EliminarFactura($_GET["CodigoCompetencia"]);
-// }
-
 
 ?>

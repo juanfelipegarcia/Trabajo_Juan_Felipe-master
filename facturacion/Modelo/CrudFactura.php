@@ -11,8 +11,14 @@ class CrudFactura{
           $Sql->bindValue('IdCliente',$Factura->getIdCliente());
           try{
                $Sql->execute(); //Ejecutar la inserción
-               echo "Factura Generada";
-               echo "<br>";
+               //echo "Factura Generada";
+               
+               ?>
+               <script>
+               
+               alert("Factura Generada");
+               </script>
+               <?php
                $CodigoFacturaGenerado = $Db->lastInsertId();//Consultar el último Id Insertado
           }
           catch(Exception $e)

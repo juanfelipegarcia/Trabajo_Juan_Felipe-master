@@ -123,7 +123,7 @@ $ListaEstado = $CrudEstado -> ListarEstado();
                </form>
                <br>
                <div align="center">
-               <button  type="" class="btn btn-primary"><a href="ListarCotizacion.php"><font color="#ffffff">Volver</font></a></button>
+               <a href="ListarCotizacion.php" class="btn btn-outline-primary" >Volver</a>
                </div>
      </div>
      <br>

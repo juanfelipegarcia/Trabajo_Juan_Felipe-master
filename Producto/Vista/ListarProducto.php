@@ -44,10 +44,10 @@ $ListaProducto = $CrudProducto->ListarProducto();
           <br>
           <ul class="nav nav-fill">
                <li class="nav-item">
-               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="CrearProducto.php">Crear un Producto</a></button>
+               <a class="btn btn-outline-primary"  href="CrearProducto.php">Crear un Producto</a>
                </li>
                <li class="nav-item">
-               <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../TCPDF/examples/reportepdfempresa.php" target="_blank">Reporte de  Productos</a></button>
+               <a class="btn btn-outline-primary"  href="../../TCPDF/examples/reportepdfproductos.php" target="_blank">Reporte de  Productos</a>
                </li>
           </ul>
           <br>
@@ -84,7 +84,7 @@ $ListaProducto = $CrudProducto->ListarProducto();
                </tbody>
           </table>
 
-          <button type="button" class="btn btn-outline-info"><a class="nav-link active" href="../../Navegacion.php">Volver</a></button>
+          <a class="btn btn-outline-primary"  href="../../Navegacion.php">Volver</a>
      </div>
      <br>
      <footer class="footer " align="center">
