@@ -24,6 +24,8 @@ $ListaProducto = $CrudProducto->ListarProducto();
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Listar Cotizacion</title>
 
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -44,10 +46,10 @@ $ListaProducto = $CrudProducto->ListarProducto();
           <br>
           <ul class="nav nav-fill">
                <li class="nav-item">
-               <a class="btn btn-outline-primary"  href="CrearProducto.php">Crear un Producto</a>
+               <a class="btn btn-outline-primary"  href="CrearProducto.php"><i class="fas fa-plus-circle"></i> Crear un Producto</a>
                </li>
                <li class="nav-item">
-               <a class="btn btn-outline-primary"  href="../../TCPDF/examples/reportepdfproductos.php" target="_blank">Reporte de  Productos</a>
+               <a class="btn btn-outline-primary"  href="../../TCPDF/examples/reportepdfproductos.php" target="_blank"><i class="fas fa-file-pdf"></i> Reporte de  Productos</a>
                </li>
           </ul>
           <br>

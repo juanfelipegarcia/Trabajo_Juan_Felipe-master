@@ -21,6 +21,8 @@ if (!(isset($_SESSION["Nombre"]))) {
      <title>Document</title>
      <link rel="stylesheet" href="css/estiloNavegacion.css">
 
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -40,7 +42,7 @@ if (!(isset($_SESSION["Nombre"]))) {
                <div class="col-sm-4">
                     <div class="card">
                          <div class="card-body">
-                         <h5 class="card-title">Cotización</h5>
+                         <h5 class="card-title"><i class="fas fa-file"></i> Cotización</h5>
                          <a href="Cotizacion/Vista/ListarCotizacion.php" class="btn btn-primary">Ir a Cotización</a>
                          </div>
                     </div>
@@ -48,7 +50,7 @@ if (!(isset($_SESSION["Nombre"]))) {
                <div class="col-sm-4">
                     <div class="card">
                          <div class="card-body">
-                         <h5 class="card-title">Empresa</h5>
+                         <h5 class="card-title"><i class="fas fa-industry"></i> Empresa</h5>
                          <a href="Empresa/Vista/ListarEmpresa.php" class="btn btn-primary">Ir a Empresa</a>
                          </div>
                     </div>
@@ -56,27 +58,35 @@ if (!(isset($_SESSION["Nombre"]))) {
                <div class="col-sm-4">
                     <div class="card">
                          <div class="card-body">
-                         <h5 class="card-title">Estado</h5>
-                         <a href="Estado/Vista/ListarEstado.php" class="btn btn-primary">Ir a Estado</a>
+                         <h5 class="card-title"><i class="fas fa-toggle-off"></i> Estado Cotización</h5>
+                         <a href="Estado/Vista/ListarEstado.php" class="btn btn-primary">Ir a Estado Cotización</a>
                          </div>
                     </div>
                </div>
           </div>
           <br>
           <div class="row" align="center">
-               <div class="col-sm-6">
+               <div class="col-sm-4">
                     <div class="card">
                          <div class="card-body">
-                         <h5 class="card-title">Productos</h5>
+                         <h5 class="card-title"><i class="fas fa-boxes"></i> Productos</h5>
                          <a href="Producto/Vista/ListarProducto.php" class="btn btn-primary">Ir a Productos</a>
                          </div>
                     </div>
                </div>
-               <div class="col-sm-6">
+               <div class="col-sm-4">
                     <div class="card">
                          <div class="card-body">
-                         <h5 class="card-title">Facturacion</h5>
+                         <h5 class="card-title"><i class="fas fa-file-invoice-dollar"></i> Facturacion</h5>
                          <a href="Facturacion/Vista/ListarFactura.php" class="btn btn-primary">Ir a Facturacion</a>
+                         </div>
+                    </div>
+               </div>
+               <div class="col-sm-4">
+                    <div class="card">
+                         <div class="card-body">
+                         <h5 class="card-title"><i class="fas fa-th-list"></i> Listas</h5>
+                         <a href="Listas/Vistas/listas.php" class="btn btn-primary">Ir a Listados</a>
                          </div>
                     </div>
                </div>
