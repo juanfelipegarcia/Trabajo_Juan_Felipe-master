@@ -103,30 +103,29 @@ $(document).ready(function(){
      });
 });
 
-// $(document).ready(function() {
-//      $("#FrmCrearFactura").submit(function(event){
-//           event.preventDefault();
+$(document).ready(function() {
+     $("#FrmCrearFactura").submit(function(event){
+          event.preventDefault();
 
-          
+          let validado = 0;
 
+          if($("#ProductosAgregados").val() == 0)
+          {
+               alert("Sin productos agregados");
+          }
+          else
+          {
+               validado++;
+          }
 
-//           if (!$("#ProductosAgregados").val() == 0)
-//           {
-//                document.FrmCrearFactura.submit();
-//           }
-//           else{
-//                Swal.fire({
-//                     title:'Error en la creacion',text:'Campos pendientes por validar',icon:'error',footer:'<span class="rojo">Kreemo Solution Systems',
-//                     //width: '50%',
-//                     padding:'1rem',
-//                     //background:'#000',
-//                     backdrop:true,
-//                     //toast: true,
-//                     position:'center',
-//                });
-//                //alert("Campos pendientes por validar");
-//                validado = 0;
-//           }
+          if(validado == 1)
+          {
+               document.FrmCrearFactura.submit();
+          }
+          else
+          {
+               alert("Debe agregar productos");
+          }
 
-//      });
-// });
+     });
+});

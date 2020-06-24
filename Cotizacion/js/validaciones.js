@@ -95,6 +95,7 @@ $(document).ready(function() {
 
           if (validado==7)
           {
+          
                document.FrmCrearCotizacion.submit();
           }
           else{

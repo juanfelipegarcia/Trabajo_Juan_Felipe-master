@@ -22,9 +22,9 @@ class CrudCotizacion{
           try {
                $Insert->execute();//ejecutar el insert
                //Echo " Registro exitoso";
+               //header("location:../Vista/CrearCotizacion.php");
                ?>
                <script>
-          //header("location:../../index.php");
                alert("Registro exitoso");
                document.location.href="../Vista/CrearCotizacion.php";
                </script>
